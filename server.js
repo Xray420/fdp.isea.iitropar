@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 
 // Set the port for the server to listen on
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;  // Use Heroku's PORT or fallback to 3000 locally
 
 // Serve static files (HTML, CSS, JS) from the 'public' folder
 app.use(express.static('public'));
